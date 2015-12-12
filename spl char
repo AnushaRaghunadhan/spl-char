@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    char str[100];
+    int digits=0,Alphabet=0,special characters=0,spaces=0;
+    int count;
+    printf("enter the string");
+    gets(str);
+    for(count=0;str[count]!=NULL;count++)
+    {
+        if(str[count]>=0&&str[count]<=9)
+        {
+            digits++;
+         else if((str[count]>='A' && str[count]<='Z')||(str[count]>='a' && str[count]<='z'))
+            Alphabet++;
+        else if(str[count]==' ')
+            Spaces++;
+        else
+            SpecialChar++;
+        }
+    }
+    printf("\nDigits:%d\nAlphabets:%d\nSpaces:%d\nSpecial Characters:%d",Digits,Alphabet,Spaces,SpecialChar);
+ 
+    return(0);
+}
